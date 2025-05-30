@@ -52,11 +52,3 @@ parameters:
 extra:
   python:
     source: tools/dingtalk-assistant-caller.py
-
-echo "# dingtalk-assistant-caller" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Euraxluo/dingtalk-assistant-caller.git
-git push -u origin main

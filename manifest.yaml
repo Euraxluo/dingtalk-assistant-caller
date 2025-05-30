@@ -1,0 +1,55 @@
+version: 0.0.1
+type: plugin
+author: euraxluo
+name: dingtalk-assistant-caller
+label:
+  en_US: dingtalk-assistant-caller
+  ja_JP: dingtalk-assistant-caller
+  zh_Hans: dingtalk-assistant-caller
+  pt_BR: dingtalk-assistant-caller
+description:
+  en_US: dingtalk assistant-api caller
+  ja_JP: dingtalk assistant-api caller
+  zh_Hans: dingtalk assistant-api caller
+  pt_BR: dingtalk assistant-api caller
+icon: icon.svg
+tags:
+  - utilities
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: false
+    model:
+      enabled: false
+      llm: false
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: false
+      size: 1024
+plugins:
+  tools:
+    - provider/dingtalk-assistant-caller.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-05-30T08:36:38.996698+08:00
+privacy: PRIVACY.md
+verified: false

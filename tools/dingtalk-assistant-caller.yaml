@@ -1,0 +1,62 @@
+identity:
+  name: dingtalk-assistant-caller
+  author: euraxluo
+  label:
+    en_US: dingtalk-assistant-caller
+    zh_Hans: dingtalk-assistant-caller
+    pt_BR: dingtalk-assistant-caller
+description:
+  human:
+    en_US: dingtalk assistant-api caller
+    zh_Hans: dingtalk assistant-api caller
+    pt_BR: dingtalk assistant-api caller
+  llm: dingtalk assistant-api caller
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Question to query DingTalk AI Assistant
+      zh_Hans: 希望询问钉钉AI助理的问题
+      pt_BR: Question to query DingTalk AI Assistant
+    human_description:
+      en_US: The question you want to ask the AI assistant
+      zh_Hans: 你想要询问钉钉AI助理的问题
+      pt_BR: The question you want to ask the AI assistant
+    llm_description: The question or query to be sent to the DingTalk AI Assistant
+    form: llm
+  - name: instructions
+    type: string
+    required: false
+    label:
+      en_US: Instructions for the AI Assistant
+      zh_Hans: AI 助手的指令
+      pt_BR: Instruções para o Assistente de IA
+    human_description:
+      en_US: Custom instructions to guide the AI assistant's behavior
+      zh_Hans: 指导 AI 助手行为的自定义指令
+      pt_BR: Instruções personalizadas para orientar o comportamento do assistente de IA
+    llm_description: Custom instructions to guide the AI assistant's behavior and response format
+    form: form
+    default: |
+      你是一个专业的知识库机器人。请在回答的每一段中都提供详细的参考文档引用，
+      格式如下：
+         - 每个引用需要包含文档标题和链接
+         - 确保每个引用都是可点击的链接
+         - 按照相关性排序引用文档
+         - 引用格式示例：
+           ```
+           文档标题1 [链接1]
+           文档标题2 [链接2]
+           ```
+extra:
+  python:
+    source: tools/dingtalk-assistant-caller.py
+
+echo "# dingtalk-assistant-caller" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Euraxluo/dingtalk-assistant-caller.git
+git push -u origin main

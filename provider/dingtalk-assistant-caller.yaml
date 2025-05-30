@@ -1,0 +1,65 @@
+identity:
+  author: euraxluo
+  name: dingtalk-assistant-caller
+  label:
+    en_US: dingtalk-assistant-caller
+    zh_Hans: 钉钉AI助理API调用器
+    pt_BR: dingtalk-assistant-caller
+  description:
+    en_US: DingTalk AI Assistant API Caller
+    zh_Hans: 钉钉AI助理API调用器
+    pt_BR: DingTalk AI Assistant API Caller
+  icon: icon.svg
+  tags:
+      - search
+credentials_for_provider:
+  app_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: DingTalk App Key
+      zh_Hans: 钉钉App Key
+      pt_BR: DingTalk App Key
+    placeholder:
+      en_US: Enter your DingTalk App Key
+      zh_Hans: 输入钉钉App Key
+      pt_BR: Enter your DingTalk App Key
+    help:
+      en_US: Get your App Key from DingTalk Developer Console
+      zh_Hans: 获取钉钉App Key,在钉钉开发者控制台
+      pt_BR: Get your App Key from DingTalk Developer Console
+  app_secret:
+    type: secret-input
+    required: true
+    label:
+      en_US: DingTalk App Secret
+      zh_Hans: 钉钉App Secret
+      pt_BR: DingTalk App Secret
+    placeholder:
+      en_US: Enter your DingTalk App Secret
+      zh_Hans: 输入你的钉钉App Secret
+      pt_BR: Enter your DingTalk App Secret
+    help:
+      en_US: Get your App Secret from DingTalk Developer Console
+      zh_Hans: 获取钉钉App Secret,在钉钉开发者控制台
+      pt_BR: Get your App Secret from DingTalk Developer Console
+  assistant_id:
+    type: secret-input
+    required: true
+    label:
+      en_US: DingTalk Assistant ID
+      zh_Hans: 钉钉AI助理ID
+      pt_BR: DingTalk Assistant ID
+    placeholder:
+      en_US: Enter your DingTalk Assistant ID
+      zh_Hans: 钉钉AI助理ID
+      pt_BR: Enter your DingTalk Assistant ID
+    help:
+      en_US: Get your Assistant ID from DingTalk AI Assistant Console
+      zh_Hans: 获取钉钉AI助理ID,在钉钉AI助理的设置页面
+      pt_BR: Get your Assistant ID from DingTalk AI Assistant Console
+tools:
+  - tools/dingtalk-assistant-caller.yaml
+extra:
+  python:
+    source: provider/dingtalk-assistant-caller.py

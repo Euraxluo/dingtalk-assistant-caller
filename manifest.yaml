@@ -1,4 +1,4 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: euraxluo
 name: dingtalk-assistant-caller
@@ -52,4 +52,3 @@ meta:
   minimum_dify_version: null
 created_at: 2025-05-30T08:36:38.996698+08:00
 privacy: PRIVACY.md
-verified: false

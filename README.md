@@ -1,6 +1,6 @@
 ## dingtalk-assistant-caller
 
-**Author:** euraxluo
+**Author:** Euraxluo
 **Version:** 0.0.1
 **Type:** tool
 

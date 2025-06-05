@@ -1,6 +1,6 @@
 version: 0.0.2
 type: plugin
-author: euraxluo
+author: Euraxluo
 name: dingtalk-assistant-caller
 label:
   en_US: dingtalk-assistant-caller
